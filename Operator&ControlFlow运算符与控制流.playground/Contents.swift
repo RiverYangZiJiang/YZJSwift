@@ -59,3 +59,26 @@ default:
     print("")
 }
 
+
+// fallthrough，相当于OC的case分支不写break，会继续执行下面的case分支
+var tuple1 = (0, 0)
+switch tuple1 {
+case (0, 0):
+    print("0")
+    fallthrough
+case (_, 0):
+    print("1")
+default:
+    print("default")
+}
+
+func func1(param: Int) {
+    guard param > 0 else {  // param需满足大于0，否则返回
+        return
+    }
+    print(param)
+}
+
+
+
+
